@@ -18,7 +18,7 @@ For doing set up follow following steps
 4. Above command will download all related dependencies and configure your proejct in such a way that it can be imported using Eclispe
 5. Now on the same command line, hit following command for executing the test
 
-	 mvn integration-test aggregate
+	 mvn verify
 	 
 6. This command will compile the code and start the test execution
 
