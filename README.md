@@ -24,4 +24,24 @@ For doing set up follow following steps
 
 Now you are good to go 
 
-# TODO: Need to mention the added advantages of Serenity
+# Few additional features of Serenity:
+	 
+1. Sometimes during your releases, you find that certain functionality is not a good condidate for automation and its better to do a manual run of that test case,
+but you would still like to see in the overall test reports. then use a @manual tag in Meta: section of scenario
+	 
+	 Scenario: Display social media links for a product
+	 Meta:
+	 @manual
+	
+2. Now in your report just hovering on the screenhsot will show you the image as overlay, which helps in quick test analysis
+	 
+3. Added the deep.step.execution.after.failures system property. 
+This allows you to decide whether @Step methods should simply be skipped after a previous step has failed (the default: this is faster, but it means that only top-level steps will be reported), or if the subsequent steps will be executed in “dry-run” mode (will report on nested steps as well as the top level ones)
+	 
+4. Improved error and exception reporting for RestAssured(REST Api) tests.
+	 
+5. Many other smaller bug fixes and performance improvements
+	 
+6. New commands are added for implicit and explicitg waits.
+	 
+7. Latest Serenity has the libraries for latest version of Selenium
