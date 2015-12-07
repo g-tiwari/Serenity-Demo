@@ -30,7 +30,9 @@ Now you are good to go
 but you would still like to see in the overall test reports. then use a @manual tag in Meta: section of scenario
 	 
 	 Scenario: Display social media links for a product
+	 
 	 Meta:
+	 
 	 @manual
 	
 2. Now in your report just hovering on the screenhsot will show you the image as overlay, which helps in quick test analysis
