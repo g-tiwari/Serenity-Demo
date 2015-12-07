@@ -12,17 +12,17 @@ public class DefinitionSteps {
     @Steps
     EndUserSteps endUser;
 
-    @Given("the user is on the Wikionary home page")
-    public void givenTheUserIsOnTheWikionaryHomePage() {
+    @Given("the user is on the Google home page")
+    public void givenTheUserIsOnTheGooogleHomePage() {
         endUser.is_the_home_page();
     }
 
-    @When("the user looks up the definition of the word '$word'")
+    @When("the user search for the word '$word'")
     public void whenTheUserLooksUpTheDefinitionOf(String word) {
         endUser.looks_for(word);
     }
 
-    @Then("they should see the definition '$definition'")
+    @Then("they should see the word '$definition' in all results")
     public void thenTheyShouldSeeADefinitionContainingTheWords(String definition) {
         endUser.should_see_definition(definition);
     }

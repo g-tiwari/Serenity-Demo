@@ -1,18 +1,18 @@
 Lookup a definition
 Narrative:
-In order to talk better
-As an English student
+In order to search better
+As an search analyst
 I want to look up word definitions
 
-Scenario: Looking up the definition of 'apple'
-@manual
-Given the user is on the Wikionary home page
-When the user looks up the definition of the word 'apple'
-Then they should see the definition 'A common, round fruit produced by the tree Malus domestica, cultivated in temperate climates.'
+Scenario: Looking up the definition of 'gmail'
+!--Meta:
+!--@manual
+Given the user is on the Google home page
+When the user search for the word 'gmail'
+Then they should see the word 'gmail' in all results
 
-Scenario: Looking up the definition of 'pear'
-@automation
-Given the user is on the Wikionary home page
-When the user looks up the definition of the word 'pear'
-Then they should see the definition 'An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.'
+Scenario: Looking up the definition of 'facebook'
+Given the user is on the Google home page
+When the user search for the word 'facebook'
+Then they should see the word 'facebook' in all results
 

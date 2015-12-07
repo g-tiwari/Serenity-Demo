@@ -13,13 +13,13 @@ import java.util.List;
 
 import static ch.lambdaj.Lambda.convert;
 
-@DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary")
-public class DictionaryPage extends PageObject {
+@DefaultUrl("https://www.google.co.in")
+public class GoogleSearchPage extends PageObject {
 
-    @FindBy(name="search")
+    @FindBy(name="q")
     private WebElementFacade searchTerms;
 
-    @FindBy(name="go")
+    @FindBy(name="btnG")
     private WebElementFacade lookupButton;
 
     public void enter_keywords(String keyword) {
@@ -31,8 +31,8 @@ public class DictionaryPage extends PageObject {
     }
 
     public List<String> getDefinitions() {
-        WebElementFacade definitionList = find(By.tagName("ol"));
-        List<WebElement> results = definitionList.findElements(By.tagName("li"));
+        WebElementFacade definitionList = find(By.id("res"));
+        List<WebElement> results = definitionList.findElements(By.cssSelector("div.rc h3 a"));
         return convert(results, toStrings());
     }
 

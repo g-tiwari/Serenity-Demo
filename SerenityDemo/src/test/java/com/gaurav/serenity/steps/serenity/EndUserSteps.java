@@ -1,6 +1,6 @@
 package com.gaurav.serenity.steps.serenity;
 
-import com.gaurav.serenity.pages.DictionaryPage;
+import com.gaurav.serenity.pages.GoogleSearchPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
 
@@ -10,26 +10,26 @@ import static org.hamcrest.Matchers.hasItem;
 
 public class EndUserSteps extends ScenarioSteps {
 
-    DictionaryPage dictionaryPage;
+	GoogleSearchPage searchPage;
 
     @Step
     public void enters(String keyword) {
-        dictionaryPage.enter_keywords(keyword);
+    	searchPage.enter_keywords(keyword);
     }
 
     @Step
     public void starts_search() {
-        dictionaryPage.lookup_terms();
+    	searchPage.lookup_terms();
     }
 
     @Step
     public void should_see_definition(String definition) {
-        assertThat(dictionaryPage.getDefinitions(), hasItem(containsString(definition)));
+        assertThat(searchPage.getDefinitions(), hasItem(containsString(definition)));
     }
 
     @Step
     public void is_the_home_page() {
-        dictionaryPage.open();
+    	searchPage.open();
     }
 
     @Step
